@@ -1,4 +1,4 @@
-MultiCraft Open Source
+MultiCraft Open Source [![Build status](https://github.com/MultiCraft/MultiCraft/workflows/luacheck/badge.svg)](https://github.com/MultiCraft/MultiCraft/actions)
 ======================
 
 MultiCraft is an Open Source sandbox game inspired by [Minecraft](https://minecraft.net/).
