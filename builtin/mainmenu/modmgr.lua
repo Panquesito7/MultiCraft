@@ -290,7 +290,6 @@ function modmgr.render_modlist(render_list)
 	end
 
 	local list = render_list:get_list()
-	local last_modpack
 	local retval = {}
 	for i, v in ipairs(list) do
 		local color = ""

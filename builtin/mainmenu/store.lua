@@ -238,10 +238,10 @@ function modstore.handle_buttons(parent, fields, name, data)
 
 							if param.version ~= nil then
 								local found = false
-								for i=1,#param.moddetails.versions, 1 do
-									if param.moddetails.versions[i].date:sub(1,10) == param.version then
+								for j=1,#param.moddetails.versions, 1 do
+									if param.moddetails.versions[j].date:sub(1,10) == param.version then
 										fullurl = core.settings:get("modstore_download_url") ..
-														param.moddetails.versions[i].download_url
+														param.moddetails.versions[j].download_url
 										found = true
 									end
 								end

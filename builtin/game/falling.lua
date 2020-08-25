@@ -291,11 +291,11 @@ function core.check_single_for_falling(p)
 				local ntwo = core.get_node(ptwo)
 				local def = core.registered_nodes[ntwo.name]
 				if def and def.walkable then
-					connected = true
+					connected = true -- luacheck: ignore
 					return false
 				end
 			end
-			if not connected then
+			if not connected then -- luacheck: ignore
 				drop_attached_node(pa)
 				return true
 			end

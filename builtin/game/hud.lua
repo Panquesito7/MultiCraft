@@ -113,6 +113,7 @@ function hud.remove_item(player, name)
 		return false
 	end
 
+	local i_name = player:get_player_name() .. "_" .. name
 	local elem = hud_id[i_name]
 
 	if not elem then
@@ -121,8 +122,6 @@ function hud.remove_item(player, name)
 	end
 
 	player:hud_remove(elem.id)
-	elem = nil
-
 	return true
 end
 

@@ -77,7 +77,7 @@ local function get_formspec()
 		end
 	end
 
-	local infotext = ""
+	local infotext
 	local f = io.open(infofile, "r")
 	if not f then
 		infotext = fgettext("No information available")

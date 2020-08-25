@@ -53,8 +53,7 @@ local function get_formspec(_, _, tabdata)
 
 		--check for screenshot beeing available
 		local screenshotfilename = selected_mod.path .. DIR_DELIM .. "screenshot.png"
-		local error
-		local screenshotfile,error = io.open(screenshotfilename,"r")
+		local screenshotfile, error = io.open(screenshotfilename,"r")
 		if error == nil then
 			screenshotfile:close()
 			modscreenshot = screenshotfilename
@@ -69,10 +68,9 @@ local function get_formspec(_, _, tabdata)
 				.. "label[8.25,0.6;" .. selected_mod.name .. "]"
 
 		local descriptionlines
-		error = nil
 		local descriptionfilename = selected_mod.path .. "description.txt"
-		local descriptionfile,error = io.open(descriptionfilename,"r")
-		if error == nil then
+		local descriptionfile, error2 = io.open(descriptionfilename,"r")
+		if error2 == nil then
 			local descriptiontext = descriptionfile:read("*all")
 
 			descriptionlines = core.wrap_text(descriptiontext, 42, true)

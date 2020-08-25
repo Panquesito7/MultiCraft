@@ -404,7 +404,7 @@ end
 
 
 function core.add_group(name, adding)
-	local addgroup = {}
+	local addgroup = {} -- luacheck: ignore
 	addgroup = table.copy(core.registered_items[name].groups)
 	for k, v in pairs(adding) do
 		addgroup[k] = v

@@ -71,7 +71,7 @@ local function register_chatcommand_alias(new, old)
 	local def = assert(core.registered_chatcommands[old])
 	assert(not core.registered_chatcommands[new])
 
- 	core.registered_chatcommands[new] = def
+	core.registered_chatcommands[new] = def
 end
 core.register_chatcommand_alias = register_chatcommand_alias
 

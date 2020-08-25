@@ -68,7 +68,7 @@ local function get_bg(tsize, tabname)
 			core.formspec_escape(defaulttexturedir ..
 				"bg_" .. tabname .. ".png") .. ";true]"
 	end
-	
+
 	return bg
 end
 

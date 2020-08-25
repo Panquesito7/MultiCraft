@@ -283,10 +283,11 @@ local function parse_config_file(read_all, parse_mods)
 		local game = gamemgr.get_game(index)
 		while game do
 			local path = game.path .. DIR_DELIM .. FILENAME
-			local file = io.open(path, "r")
-			if file then
+			local file2 = io.open(path, "r")
+			if file2 then
 				if not games_category_initialized then
-					local translation = fgettext_ne("Games"), -- not used, but needed for xgettext
+					-- not used, but needed for xgettext
+					local translation = fgettext_ne("Games"), -- luacheck: ignore
 					table.insert(settings, {
 						name = "Games",
 						level = 0,
@@ -301,9 +302,9 @@ local function parse_config_file(read_all, parse_mods)
 					type = "category",
 				})
 
-				parse_single_file(file, path, read_all, settings, 2, false)
+				parse_single_file(file2, path, read_all, settings, 2, false)
 
-				file:close()
+				file2:close()
 			end
 
 			index = index + 1
@@ -316,10 +317,11 @@ local function parse_config_file(read_all, parse_mods)
 		get_mods(core.get_modpath(), mods)
 		for _, mod in ipairs(mods) do
 			local path = mod.path .. DIR_DELIM .. FILENAME
-			local file = io.open(path, "r")
-			if file then
+			local file3 = io.open(path, "r")
+			if file3 then
 				if not mods_category_initialized then
-					local translation = fgettext_ne("Mods"), -- not used, but needed for xgettext
+					-- not used, but needed for xgettext
+					local translation = fgettext_ne("Mods"), -- luacheck: ignore
 					table.insert(settings, {
 						name = "Mods",
 						level = 0,
@@ -334,9 +336,9 @@ local function parse_config_file(read_all, parse_mods)
 					type = "category",
 				})
 
-				parse_single_file(file, path, read_all, settings, 2, false)
+				parse_single_file(file3, path, read_all, settings, 2, false)
 
-				file:close()
+				file3:close()
 			end
 		end
 	end
@@ -448,7 +450,7 @@ local function create_change_setting_formspec(dialogdata)
 
 	formspec = formspec .. ",,"
 
-	local comment_text = ""
+	local comment_text
 
 	if setting.comment == "" then
 		comment_text = fgettext_ne("(No description of setting given)")
@@ -649,7 +651,7 @@ local function create_settings_formspec(tabview, name, tabdata)
 			formspec = formspec .. "," .. (current_level + 1) .. "," .. core.formspec_escape(name) .. ","
 					.. value .. ","
 
-		elseif entry.type == "key" then
+		elseif entry.type == "key" then -- luacheck: ignore
 			-- ignore key settings, since we have a special dialog for them
 
 		else

@@ -97,7 +97,7 @@ end
 local function enable_mod(this, toset)
 	local mod = this.data.list:get_list()[this.data.selected_mod]
 
-	if mod.is_game_content then
+	if mod.is_game_content then -- luacheck: ignore
 		-- game mods can't be enabled or disabled
 	elseif not mod.is_modpack then
 		if toset == nil then
