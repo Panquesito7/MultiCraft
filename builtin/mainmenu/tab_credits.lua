@@ -18,7 +18,7 @@
 --------------------------------------------------------------------------------
 
 local multicraft_developers = {
-	"Maksim Gamarnik (MoNTE48) <MoNTE48@mail.ua>",
+	"Maksim Gamarnik (MoNTE48) <Maksym48@pm.me>",
 	"Bektur Mambetov (ubulem) <berkut87@gmail.com>",
 	"Alexander Zavrin (Ransom.00)",
 	"luk3yx",

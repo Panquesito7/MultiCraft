@@ -324,6 +324,8 @@
 		84B4414C27ABFD5B000AFAAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		84B9C11524A4D82400016BCE /* ConsentAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentAlertViewController.swift; sourceTree = "<group>"; };
 		84B9C11624A4D82400016BCE /* ConsentAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsentAlertViewController.xib; sourceTree = "<group>"; };
+		84BA9DE727C5569D004FAF40 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84BA9DE827C5569D004FAF40 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84C32A3824AF7DDE00445E92 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		84C67B1D25D5E06B002E2735 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		84CD4A55248781420019B81D /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
@@ -346,7 +348,6 @@
 		84E95CAB27AFE158003253C8 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84E95CAC27AFE167003253C8 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84E95CAD27AFE171003253C8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		84BA9DE727C5569D004FAF40 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84E95CAF27AFE1B1003253C8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84E95CB027AFE1D8003253C8 /* et */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = et; path = et.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84E95CB127AFE1F8003253C8 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -370,7 +371,6 @@
 		84E95D0827AFEA5F003253C8 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84E95D0927AFEA60003253C8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84E95D0A27AFEA61003253C8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		84BA9DE827C5569D004FAF40 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84E95D0C27AFEA62003253C8 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84E95D0D27AFEA62003253C8 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84E95D0F27AFEA63003253C8 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1487,7 +1487,6 @@
 				F8E6C4D51DCA3B7900F64426 /* Sources */,
 				F8E6C4D61DCA3B7900F64426 /* Frameworks */,
 				F8E6C4D71DCA3B7900F64426 /* Resources */,
-				7055146ABE25F98BDC1A6400 /* [CP] Embed Pods Frameworks */,
 				84A4380625535BA5002571D4 /* Embed Frameworks */,
 				84F1E21825F0B70500A731AE /* Upload Sentry */,
 				A91BBBFDFB91D0CBDAABCA4E /* [CP] Copy Pods Resources */,
@@ -1587,26 +1586,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7055146ABE25F98BDC1A6400 /* [CP] Embed Pods Frameworks */ = {
+		84F1E21825F0B70500A731AE /* Upload Sentry */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MultiCraft/Pods-MultiCraft-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MultiCraft/Pods-MultiCraft-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiCraft/Pods-MultiCraft-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		84F1E21825F0B70500A731AE /* Upload Sentry */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
 			inputPaths = (
 				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
 			);
@@ -2006,7 +1990,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 144;
+				CURRENT_PROJECT_VERSION = 146;
 				DEVELOPMENT_TEAM = R3RLJ9TW52;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -2040,7 +2024,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.21.0;
+				MARKETING_VERSION = 1.22.0;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fvisibility=hidden",
@@ -2072,7 +2056,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 144;
+				CURRENT_PROJECT_VERSION = 146;
 				DEVELOPMENT_TEAM = R3RLJ9TW52;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -2107,7 +2091,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.21.0;
+				MARKETING_VERSION = 1.22.0;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fvisibility=hidden",
